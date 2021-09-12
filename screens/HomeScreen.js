@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, Button, Image, Dimensions, StyleSheet, TouchableOpacity } from 'react-native';
-
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const HomeScreen = ({ navigation }) => {
@@ -8,16 +7,12 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.title}>It begins here!</Text>
-                {/**    <Image
-                    source={require('../assets/Vueplongeante1.png')}
-
-                />*/}
             </View>
             <View style={styles.footer}>
                 <Text style={styles.title}>Connect with the best team!</Text>
                 <Button
                     title="Get started"
-                    onPress={() => navigation.navigate("Login")}
+                    onPress={() => props.navigation.navigate("Login")}
                 />
                 <View style={styles.footer}>
                     <TouchableOpacity onPress={() => alert('click')}>

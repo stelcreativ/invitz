@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Button, Image, StyleSheet, TextInput, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import {
@@ -22,26 +22,25 @@ const ProfileScreen = ({ navigation }) => {
                 </View>
 
                 <View style={styles.row}>
-                    <Icon name="email" color="#777777" size={20} />
-                    <Text style={{ color: "#777777", marginLeft: 20 }}>cool@gmail.com</Text>
+                    <MaterialIcons name="mail" color="#777777" size={20} />
+                    <Text style={{ color: "#777777", padding: 5 }}>cool@gmail.com</Text>
                 </View>
             </View>
 
-            <View style={styles.action}>
-                <FontAwesome name="user" size={20} />
-                <TextInput
-                    placeholder="First Name"
-                    placeholderTextColor="#666666"
-                    autoCorrect={false}
-                    style={styles.textInput}
-                />
-
-                <View style={{ alignItems: "flex-end", marginTop: 64 }}>
-                    <TouchableOpacity style={styles.continue} onPress={this.continue}>
-                        <Icon name="md-arrow-round-forward" size={24} color="#FFF" />
-                    </TouchableOpacity>
-                </View>
+            <View>
+                <Text style={{ color: "#777777", padding: 5 }}>Jenifer Wallace</Text>
             </View>
+
+            <View style={{ alignItems: "flex-end", marginTop: 64 }}>
+                <TouchableOpacity style={styles.continue} onPress={this.continue}>
+                    <MaterialIcons
+                        name="navigate-next"
+                        color="#fff"
+                        size={24}
+                    />
+                </TouchableOpacity>
+            </View>
+
 
         </View>
     );
